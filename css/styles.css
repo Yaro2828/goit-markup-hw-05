@@ -146,7 +146,6 @@ img {
   opacity: 1;
 }
 
-
 .header-tel {
   margin-left: auto;
 }
@@ -295,6 +294,23 @@ img {
 
 .gallery-item {
   width: calc(100%-60px) / 3;
+  position: relative;
+}
+
+.gallery-bottom-text {
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  color: var(--background-text-color);
+  line-height: calc(16 / 14);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: absolute;
 }
 
 /* <!-- our team --> */
@@ -528,9 +544,9 @@ img {
   padding: 6px 22px;
   background: #f5f4fa;
   cursor: pointer;
-  transition: color var(--transition-duration) var(--transition-timing-function), 
-  background-color var(--transition-duration) var(--transition-timing-function), 
-  box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-btn:hover,
@@ -552,8 +568,7 @@ img {
 
 .portfolio-item {
   width: calc((100% - 60px) / 3);
-  transition: box-shadow var(--transition-duration) var(--transition-timing-function) ;
-   
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-item:hover,
@@ -570,8 +585,8 @@ img {
   display: block;
 }
 
-.portfolio-link:hover .portfolio-overlay-text ,
-.portfolio-link:focus .portfolio-overlay-text  {
+.portfolio-link:hover .portfolio-overlay-text,
+.portfolio-link:focus .portfolio-overlay-text {
   transform: translateY(0);
 }
 
@@ -581,18 +596,18 @@ img {
 }
 
 .portfolio-overlay-text {
-font-size: 18px;
-line-height: 1.56;
-color:var(--background-text-color);
-background-color: rgba(33, 150, 243, 0.9);
-padding: 63px 24px;
-position: absolute;
-top: 0;
-left: 0;
-height: 100%;
-transform: translateY(100% );
-transition: transform var(--transition-duration) var(--transition-timing-function);
-overflow: auto;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--background-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  overflow: auto;
 }
 
 .portfolio-item-box {
@@ -614,29 +629,28 @@ overflow: auto;
   color: var(--secondary-text-color);
 }
 
-
+/* Modal */
 .backdrop {
   position: fixed;
   top: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.2);
-transition: opacity var(--transition-duration) var(--transition-timing-function),
-visibility var(--transition-duration) var(--transition-timing-function);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition-duration) var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
 }
 
 .modal {
   width: 528px;
   min-height: 581px;
   background-color: var(--background-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-  0px 1px 1px rgba(0, 0, 0, 0.14), 
-  0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .modal-btn {
