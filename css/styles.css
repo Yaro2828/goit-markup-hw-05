@@ -384,10 +384,12 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color var(--transition-duration) var(--transition-timing-function);
+  fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team-soc-icon {
   fill: var(--svg-primary-color);
+  transition:  fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team-soc-link:hover,
@@ -432,6 +434,7 @@ img {
 .customer-icon {
   fill: var(--svg-primary-color);
   height: 60px;
+  transition:  fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .customer-link:hover,
